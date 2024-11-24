@@ -1,0 +1,169 @@
+.book {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.book-content-img {
+  width: 30%;
+  height: 300px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  margin-right: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير الحركة */
+}
+
+.book-content-img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-content-info {
+  width: 60%;
+}
+
+.book-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.book-author {
+  color: var(--text-color);
+  font-size: 18px;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.book-author span {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+.book-add-to-cart {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book-add-to-cart-input {
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid var(--gold-color);
+  border-radius: 5px;
+  width: 60px;
+  text-align: center;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+.book-add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-add-to-cart-btn:hover {
+  background-color: var(--highlight-color);
+}
+
+.book-description {
+  width: 80%;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.book-icons {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.book-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--highlight-color);
+  transition: transform 0.3s ease, color 0.3s ease; /* تأثير الحركة */
+}
+
+.book-icon:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.book-icon small {
+  font-weight: 600;
+}
+
+.book-icon .bicon {
+  font-size: 32px;
+  margin: 5px 0;
+  color: var(--gold-color);
+}
+
+/* Media Queries */
+@media (max-width: 720px) {
+  .book {
+    padding: 20px;
+  }
+
+  .book-description {
+    width: 100%;
+  }
+
+  .book-add-to-cart {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-add-to-cart-input {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .book-content {
+    flex-direction: column;
+  }
+
+  .book-content-img {
+    width: 100%;
+  }
+
+  .book-content-info {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .book-icons {
+    flex-direction: column;
+  }
+
+  .book-icon {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,131 @@
+/* Container for the slider */
+.slider-container {
+  height: calc(100vh - 250px);
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arrow Styles */
+.arrow-right,
+.arrow-left {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  font-size: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: var(--secondary-color); 
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide Styles */
+.slide {
+  height: calc(100vh - 250px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Background Gradient for Each Slide */
+.slide.first-slide {
+  background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.slide.second-slide {
+  background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.slide.third-slide {
+  background: linear-gradient(135deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 80%, rgba(252, 176, 69, 1) 100%);
+}
+
+/* Image Wrapper for Each Slide */
+.slide-image-wrapper {
+  height: 90%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image-wrapper img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Wrapper for Each Slide */
+.slide-info-wrapper {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.slide-info-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.slide-info-desc {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media(max-width: 720px) {
+  .slide-info-wrapper {
+    margin-right: 20px;
+  }
+
+  .slide-info-title {
+    font-size: 30px;
+  }
+
+  .slide-info-desc {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 520px) {
+  .slider-container {
+    display: none;
+  }
+}

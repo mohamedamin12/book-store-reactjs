@@ -1,0 +1,67 @@
+.about-us-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us-header h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.about-us-header p {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-us-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-us-section h2 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.about-us-section p {
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-section {
+    flex-direction: column;
+  }
+
+  .about-us-image {
+    width: 100%;
+  }
+}

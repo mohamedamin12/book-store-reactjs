@@ -1,0 +1,58 @@
+:root {
+  --main-color: #FAF3E0; 
+  --primary-color: #8E9775; 
+  --secondary-color: #E7D7C1; 
+  --text-color: #5A4631; 
+  --highlight-color: #B85450; 
+  --gold-color: #D4A373; 
+}
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", serif;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button, .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--highlight-color);
+}
+
+
+
+h1, h2, h3 {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
